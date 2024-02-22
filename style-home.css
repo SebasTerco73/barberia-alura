@@ -1,0 +1,45 @@
+
+
+
+
+h1{
+    color: rgb(12, 43, 182);
+}
+
+p{
+    text-align: center;
+}
+
+em strong{
+    color: #f00;;
+}
+
+#mision{
+    font-size: 20px;
+    color: tomato;
+}
+
+.principal{
+    background: #CCCCCC;
+    padding: 20px;
+}
+
+.diferenciales{
+    padding: 30px;
+    background: #ffffff;
+}
+
+.item{
+    font-style: italic;
+}
+
+ul{
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+    margin-right: 15%;
+}
+
+.imagenDiferenciales{
+    width: 50%;
+}

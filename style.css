@@ -1,0 +1,326 @@
+/* aplicamos una fuente externa */
+body {
+    font-family: "Montserrat Alternates", sans-serif;
+}
+
+header {
+    background: #bbb;
+    /* Margen interno */
+    padding: 20px 0;
+}
+
+nav li {
+    display: inline;
+    /* margen externo  */
+    margin: 0 0 0 15px;
+}
+
+/* "." para clases  */
+.caja {
+    width: 940px;
+    /* permite mover el elemento desde su posicion natural */
+    position: relative;
+    margin: 0 auto;
+}
+
+nav {
+    /* permite mover el elemento desde la posicion 0 (cero) */
+    position: absolute;
+    top: 110px;
+    right: 0px;
+}
+
+nav a {
+    text-transform: uppercase;
+    color: #000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+/* hover:movimiento del mouse */
+nav a:hover {
+    color: #c78c19;
+    text-decoration: underline;
+}
+
+.productos {
+    /* tamaño total de TODOS los productos */
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px;
+    /* Cada elemento ocupará un espacio igual, independientemente de su contenido. */
+    display: flex;
+}
+
+.productos li {
+    display: inline-block;
+    text-align: center;
+    /* tamaño de CADA UNO de los productos (li=list item) 30*3= 90% El restante 10% va en los margenes */
+    width: 30%;
+    vertical-align: top;
+    /* Este background solo es de ayuda para configurar los margenes */
+    /* background: #cccc; */
+    /* 1.5% * 6= 9% -> (6=2 por cada lado de cada item).Con este 9% sumado al 90% se completa el total  */
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    /* border box hace que el padding este incluido en el 30% del width. Si no se pone, 
+    seria % extra y haria que se pase del 100% del elemento y pasaria al renglon de abajo */
+    box-sizing: border-box;
+    /* borde ancho estilo color */
+    /* es lo mismo que border-width,border-style,border-color */
+    border: 2px solid #000;
+    /* borde redondo, 
+    border-top-left-radius,border-top-right-radius
+    border-bottom-left-radius,border-bottom-right-radius.
+    En una linea: border-radius: 10px 11px 12px 14px
+    orden: superior izquierdo, superior derecho, inferior derecho inferior izquierdo
+    se mueve en el sentido de las agujas del reloj.
+    Si todos los bordes tienen el mis valor, solo poner uno solo*/
+    border-radius: 10px;
+}
+
+/* movimiento del mouse cambia el borde */
+.productos li:hover {
+    border-color: #c78c19;
+}
+
+
+/* Cuando se posiciona(hover) en cualquier parte del elemento "li" (li:hover)
+se efectuaran los siguinetes cambios en el elemento "h2" */
+.productos li:hover h2 {
+    font-size: 33px;
+}
+
+/* Accion de clickear o mantener el click presionado */
+.productos li:active {
+    border-color: #088c19;
+}
+
+
+.productos h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.producto-descripcion {
+    font-size: 18px;
+}
+
+.producto-precio {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    background: url(imagenes/bg.jpg);
+    padding: 40px;
+}
+
+.copyright {
+    color: #ffffff;
+    font-size: 13px;
+    margin: 20px;
+}
+
+form {
+    margin: 40px;
+}
+
+/* display block para que ocupen todo el ancho de la pagina, por defecto vienen como inline */
+/* combinar estilos para varios selectores, separados por la coma "," */
+form label,
+form legend {
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+label,
+fieldset {
+    margin-bottom: 15px;
+}
+
+.input-padron {
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+}
+
+.checkbox {
+    margin: 25px 5px 20px;
+}
+
+.enviar {
+    width: 40%;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: orange;
+    border: none;
+    /* puntas redondeadas */
+    border-radius: 5px;
+    /* tiempo de transicion al cambiar el background  
+    transition: 1s background;*/
+    transition: 1s all;
+    /* cursor de manito para los botones */
+    cursor: pointer;
+}
+
+/* evento de pasar el mouse */
+.enviar:hover {
+    background: darkorange;
+    /* aumenta la escala 1,2% */
+    transform: scale(1.2);
+}
+
+table {
+    margin: 40px 40px;
+}
+
+thead {
+    background: #555;
+    color: white;
+    font-weight: bold;
+}
+
+th,
+td {
+    border: 1px solid #000;
+    padding: 8px 15px;
+}
+
+/* CSS para nuestra HOME */
+
+.principal {
+    background: #fefefe;
+    padding: 3em 0;
+    /*1270 tiene normalmente una pantalla, una practica comun es usar 940 px para centralizar algo */
+    width: 940px;
+    margin: 0 auto;
+}
+
+.banner {
+    width: 100%;
+}
+
+.titulo-principal {
+    text-align: center;
+    /* 2em=  2 veces el tamaño padron/por defecto de la fuente que tiene el navegador.
+    si el tamaño por defecto es 15 px, 2em seran 30 px*/
+    font-size: 2em;
+    /* arriba-derecha-abajo-izq */
+    margin: 0 0 1em;
+    /* Limpiar cualquier configuracion que venga despues y antes del titulo por la izquierda
+    Para limpiar de los titulos la propiedad float de la imagen */
+    clear: left;
+}
+
+.principal p {
+    margin: 0 0 1em;
+}
+
+.principal strong {
+    font-weight: bold;
+}
+
+.principal em {
+    font-style: italic;
+}
+
+.utensilios {
+    width: 120px;
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
+.mapa {
+    padding: 1em 0;
+    background: linear-gradient(#fefefe, #888888);
+}
+
+.mapa p {
+    margin: 0 0 2em;
+    text-align: center;
+}
+
+.mapa-contenido {
+    /*1270 tiene normalmente una pantalla, una practica comun es usar 940 px para centralizar algo */
+    width: 940px;
+    margin: 0 auto;
+}
+
+.diferenciales {
+    padding: 3em 0;
+    background: #888888;
+}
+
+.contenido-diferenciales {
+    width: 640px;
+    margin: 0 auto;
+}
+
+.lista-diferenciales {
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.items {
+    /* Distancia entre lineas */
+    line-height: 1.5;
+}
+
+.items:before {
+    content: "\2605";
+}
+
+/* first-child= primer hijo/elemento. Solo el primer item de la lista*/
+.items:first-child {
+    font-weight: bold;
+}
+
+.imagen-diferenciales {
+    width: 60%;
+    /* milisegundos */
+    transition: 400ms;
+    /* sombra */
+    box-shadow: 10px 10px 30px 15px #000000;
+}
+
+.imagen-diferenciales:hover {
+    /* opasidad al pasar el mouse */
+    opacity: 0.3;
+}
+
+.video {
+    width: 560px;
+    margin: 4em auto 0;
+}
+
+/* Esto va a hacer efecto en las pantallas que tengan un width maximo de 480px, afectara a celulares */
+@media screen and (max-width:480px) {
+    h1 {
+        text-align: center;
+    }
+
+    nav {
+        position: static;
+    }
+
+    .caja,
+    .principal,
+    .mapa-contenido,
+    .contenido-diferenciales,
+    .video {
+        width: auto;
+    }
+
+    .lista-diferenciales, .imagen-diferenciales{
+        width: 100%;
+    }
+}

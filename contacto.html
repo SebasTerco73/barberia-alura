@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto - Barbería Alura</title>
+    <!-- primero al reset, para no sobreescribir nuestro css  -->
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="caja">
+            <h1><img src="imagenes/logo.png" alt="Logo de la Barbería Alura"></h1>
+
+            <!-- etiqueta para menus, enlaces de navegacion -->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- formulario -->
+        <form>
+            <!-- label vinculado al input por el id/for. Las id van en minuscula -->
+            <label for="nombreapellido">Nombre y apellido :</label>
+            <input type="text" id="nombreapellido" class="input-padron" required>
+
+            <!-- required: este campo es obligatorio -->
+            <label for="correoelectronico">Correo electrónico :</label>
+            <input type="email" id="correoelectronico" class="input-padron" placeholder="email@dominio.com" required>
+
+            <label for="telefono">Teléfono :</label>
+            <input type="tel" id="telefono" class="input-padron" placeholder="(XX) XXXX XXXX" required>
+
+            <!-- textarea, area de texto de tamaño editable, solo tiene en cuenta las filas, 
+                    las columnas estan configuradas en el css-->
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" cols="111110" rows="7" class="input-padron" required></textarea>
+
+            <!-- Funciona como un div, pero se usa cuando hay distintos items relacionados al mismo tema -->
+            <fieldset>
+                <!-- en los fieldset, en lugar de usar <p> para el titulo/pregunta se usa LEGEND-->
+                <legend>¿Cómo le gustaría que lo contactemos?</legend>
+                <!-- Radio, circulo para seleccionar opciones, name para que solo se pueda seleccionar 1 opcion -->
+                <label for="radio-email"> <input type="radio" name="contacto" value="email"
+                        id="radio-email">Email</label>
+
+                <label for="radio-telefono"><input type="radio" name="contacto" value="telefono"
+                        id="radio-telefono">Teléfono</label>
+
+                <label for="radio-whatsapp"><input type="radio" name="contacto" value="whatsapp" id="radio-whatsapp"
+                        checked>WhatsApp</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>¿En cuál horario prefiere ser atendido?</legend>
+                <!-- Lista de opciones -->
+                <select> 
+                    <option>Mañana</option>
+                    <option>Tarde</option>
+                    <option>Noche</option>
+                </select>
+            </fieldset>
+
+            <!-- input dentro del label, para ahorrar de poner una ID -->
+            <label><input type="checkbox" class="checkbox" checked>¿Le gustaría recibir novedades de la Barbería
+                Alura?</label>
+
+            <!-- boton de enviar -->
+            <input type="submit" value="Enviar formulario" class="enviar">
+        </form>
+
+        <table>
+            <!-- TR= table row, cada fila lleva un tr -->
+            <!-- TD= table data cell, cada celda dentro de la fila lleva un td -->
+            <!-- thead= Table head, para los encabezados -->
+            <thead>
+                <tr>
+                    <!-- Los titulos no usan TD, en su lugar usan TH -->
+                    <th>Día</th>
+                    <th>Horario</th>
+                </tr>
+            </thead>
+
+            <!-- TBODY= Table body - cuerpo de la tabla -->
+            <tbody>
+                <tr>
+                    <td>Lunes</td>
+                    <td>8h ~ 20h</td>
+                </tr>
+
+                <tr>
+                    <td>Miércoles</td>
+                    <td>8h ~ 20h</td>
+                </tr>
+
+                <tr>
+                    <td>Viernes</td>
+                    <td>8h ~ 20h</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </main>
+
+    <footer>
+        <img src="imagenes/logo-blanco.png" alt="Logo de la Barbería Alura">
+        <p class="copyright">&copy; Copyright Barbería Alura - 2024</p>
+    </footer>
+
+</body>
+
+</html>
